@@ -1,0 +1,265 @@
+{
+  "rows": [
+    {
+      "label": "prime",
+      "http_status": 503,
+      "round_trip_ms": 88.887,
+      "detail": "RAM pressure: live inference paused. Cached answers remain available."
+    },
+    {
+      "label": "repeat",
+      "http_status": 503,
+      "round_trip_ms": 26.693,
+      "detail": "RAM pressure: live inference paused. Cached answers remain available."
+    },
+    {
+      "label": "cached_burst_0",
+      "http_status": 503,
+      "round_trip_ms": 21.013,
+      "detail": "RAM pressure: live inference paused. Cached answers remain available."
+    },
+    {
+      "label": "cached_burst_1",
+      "http_status": 503,
+      "round_trip_ms": 32.059,
+      "detail": "RAM pressure: live inference paused. Cached answers remain available."
+    },
+    {
+      "label": "cached_burst_9",
+      "http_status": 503,
+      "round_trip_ms": 38.47,
+      "detail": "RAM pressure: live inference paused. Cached answers remain available."
+    },
+    {
+      "label": "cached_burst_3",
+      "http_status": 429,
+      "round_trip_ms": 44.689,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "cached_burst_4",
+      "http_status": 429,
+      "round_trip_ms": 44.174,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "cached_burst_5",
+      "http_status": 429,
+      "round_trip_ms": 43.906,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "cached_burst_6",
+      "http_status": 429,
+      "round_trip_ms": 43.645,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "cached_burst_7",
+      "http_status": 429,
+      "round_trip_ms": 79.952,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "cached_burst_10",
+      "http_status": 429,
+      "round_trip_ms": 118.946,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "cached_burst_8",
+      "http_status": 429,
+      "round_trip_ms": 145.943,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "cached_burst_2",
+      "http_status": 503,
+      "round_trip_ms": 150.562,
+      "detail": "RAM pressure: live inference paused. Cached answers remain available."
+    },
+    {
+      "label": "cached_burst_11",
+      "http_status": 429,
+      "round_trip_ms": 145.347,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    },
+    {
+      "label": "uncached_after_flood",
+      "http_status": 429,
+      "round_trip_ms": 14.329,
+      "detail": "Traffic limit: exact answer is not cached. Retry after the rate window."
+    }
+  ],
+  "checks": {
+    "prime_succeeded": false,
+    "repeat_cached": false,
+    "flood_served_from_cache": false,
+    "cache_only_lane_seen": false,
+    "cache_only_miss_rejected": true,
+    "cache_byte_budget_held": true,
+    "no_active_request_leaks": true
+  },
+  "before": {
+    "sample_monotonic_ns": 166045428292300,
+    "platform": "Windows",
+    "cpu_utilization_pct": 38.8,
+    "ram_utilization_pct": 89.8,
+    "available_ram_bytes": 838770688,
+    "total_ram_bytes": 8259321856,
+    "gateway_rss_bytes": 24281088,
+    "system_context_switches": 1785685461,
+    "gateway_page_faults": 18443,
+    "disk_read_count": 47002065,
+    "disk_write_count": 3686760,
+    "disk_read_bytes": 1372657236992,
+    "disk_write_bytes": 385032724480,
+    "disk_read_time": 22962,
+    "disk_write_time": 3050,
+    "sample_duration_us": 1384.4,
+    "requests": 0,
+    "cache_hits": 0,
+    "upstream_calls": 0,
+    "failures": 0,
+    "rejected": 0,
+    "active": 0,
+    "recoveries": 1,
+    "behavioral_throttles": 0,
+    "available_ram_gb": 0.78,
+    "total_ram_gb": 7.69,
+    "pending_requests": 0,
+    "max_pending": 4,
+    "cache_entries": 0,
+    "hot_entries": 0,
+    "warm_entries": 0,
+    "cache_limit": 192,
+    "cache_bytes_charged": 0,
+    "cache_byte_limit": 4194304,
+    "context_window": 1024,
+    "event_loop_lag_ms": 8.251,
+    "last_inference_queue_wait_ms": 0,
+    "last_upstream_latency_ms": null,
+    "recent_inference_deltas": [],
+    "monitor_resource_delta": {
+      "measurement_interval_us": 5009574.3,
+      "system_context_switches_delta": 139285,
+      "gateway_page_faults_delta": 4,
+      "gateway_rss_bytes_delta": 8192,
+      "available_ram_bytes_delta": 2289664,
+      "disk_read_count_delta": 5268,
+      "disk_write_count_delta": 899,
+      "disk_read_bytes_delta": 88194560,
+      "disk_write_bytes_delta": 12900864,
+      "disk_read_time_delta": 6,
+      "disk_write_time_delta": 1,
+      "disk_read_average_ms": 0.001,
+      "disk_write_average_ms": 0.001
+    },
+    "sample_age_ms": 4289.144,
+    "unsupported_metrics": [
+      "Windows OS run-queue length",
+      "system hard page faults",
+      "GPU/VRAM"
+    ],
+    "scope": "OS-wide disk/context-switch counters; gateway-only RSS/page faults. Microsecond clock timestamps do not imply microsecond counter resolution or inference causality."
+  },
+  "after": {
+    "sample_monotonic_ns": 166049963820800,
+    "platform": "Windows",
+    "cpu_utilization_pct": 41.7,
+    "ram_utilization_pct": 90.9,
+    "available_ram_bytes": 753483776,
+    "total_ram_bytes": 8259321856,
+    "gateway_rss_bytes": 32641024,
+    "system_context_switches": 1785897174,
+    "gateway_page_faults": 20484,
+    "disk_read_count": 47005380,
+    "disk_write_count": 3687828,
+    "disk_read_bytes": 1372719601664,
+    "disk_write_bytes": 385090736128,
+    "disk_read_time": 22964,
+    "disk_write_time": 3052,
+    "sample_duration_us": 1572.5,
+    "requests": 15,
+    "cache_hits": 0,
+    "upstream_calls": 0,
+    "failures": 6,
+    "rejected": 15,
+    "active": 0,
+    "recoveries": 1,
+    "behavioral_throttles": 9,
+    "available_ram_gb": 0.7,
+    "total_ram_gb": 7.69,
+    "pending_requests": 0,
+    "max_pending": 4,
+    "cache_entries": 0,
+    "hot_entries": 0,
+    "warm_entries": 0,
+    "cache_limit": 192,
+    "cache_bytes_charged": 0,
+    "cache_byte_limit": 4194304,
+    "context_window": 1024,
+    "event_loop_lag_ms": 8.251,
+    "last_inference_queue_wait_ms": 13.309,
+    "last_upstream_latency_ms": null,
+    "recent_inference_deltas": [],
+    "monitor_resource_delta": {
+      "measurement_interval_us": 5009574.3,
+      "system_context_switches_delta": 139285,
+      "gateway_page_faults_delta": 4,
+      "gateway_rss_bytes_delta": 8192,
+      "available_ram_bytes_delta": 2289664,
+      "disk_read_count_delta": 5268,
+      "disk_write_count_delta": 899,
+      "disk_read_bytes_delta": 88194560,
+      "disk_write_bytes_delta": 12900864,
+      "disk_read_time_delta": 6,
+      "disk_write_time_delta": 1,
+      "disk_read_average_ms": 0.001,
+      "disk_write_average_ms": 0.001
+    },
+    "sample_age_ms": 126.328,
+    "unsupported_metrics": [
+      "Windows OS run-queue length",
+      "system hard page faults",
+      "GPU/VRAM"
+    ],
+    "scope": "OS-wide disk/context-switch counters; gateway-only RSS/page faults. Microsecond clock timestamps do not imply microsecond counter resolution or inference causality."
+  },
+  "recovery": {
+    "recoveries": 1,
+    "epoch": 1,
+    "context_window": 1024,
+    "ram_latched": true,
+    "events": [
+      {
+        "timestamp_utc": "2026-11-05T12:24:53.148529+00:00",
+        "event": "recovery",
+        "reason": "ram_pressure",
+        "ram_utilization_pct": 90.1,
+        "upstream_latency_ms": null,
+        "cleared_entries": 0,
+        "context_window": 1024,
+        "epoch": 1,
+        "action": "clear_owned_cache; retire_owned_HTTP_pool; reduce_future_context"
+      },
+      {
+        "timestamp_utc": "2026-11-05T12:25:32.741205+00:00",
+        "event": "behavioral_throttle",
+        "client": "8a4ee826ccae635c",
+        "developer_stress_index": 100,
+        "lane": "CACHE_ONLY"
+      }
+    ],
+    "monitor_interval_seconds": 5,
+    "latency_threshold_ms": 3500,
+    "ram_threshold_pct": 90,
+    "recovery_cooldown_seconds": 30
+  },
+  "mode": "LIVE: real HTTP gateway and its configured Ollama; no fault injection",
+  "limits": "No deliberate RAM exhaustion. Recovery is observed only if it naturally occurs; deterministic recovery coverage is in --simulate and unit tests. Host pressure, recovery cache invalidation or a preexisting traffic penalty may cause checks to fail; inspect raw evidence.",
+  "timestamp_utc": "2026-11-05T12:25:32.930706+00:00",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "model": "qwen2.5:0.5b",
+  "passed": false
+}

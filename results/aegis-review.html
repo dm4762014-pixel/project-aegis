@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aegis — recorded evidence</title><style>
+body{font:17px/1.6 system-ui,sans-serif;color:#e6edf7;background:#0a1624;margin:0}
+main{max-width:960px;margin:auto;padding:32px 20px}h1{font-size:clamp(30px,6vw,48px);line-height:1.1}
+section{background:#14283c;border:1px solid #35516a;border-radius:16px;padding:24px;margin:24px 0}
+.label{color:#8df0c7;font-weight:700}.notice{border-left:4px solid #eec982;padding-left:16px}
+.fingerprint{overflow-wrap:anywhere;font-size:12px;color:#abc1d8}summary{cursor:pointer}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%}td,th{padding:10px;text-align:left;border-bottom:1px solid #35516a}
+</style><main><p class="label">PROJECT AEGIS / OFFLINE REVIEW</p>
+<h1>Local AI requests, measured.</h1>
+<p class="notice">This is saved evidence, not a live dashboard. Opening this file makes no network or AI calls.</p>
+<p>A small local model, bounded context, exact-request caching and memory-aware admission were tested on one Windows laptop.</p>
+<section><p class="label">REAL MODEL — RECORDED</p>
+<h2>Checks passed</h2>
+<p>Recorded timestamp: 2026-11-05T13:06:45.064773+00:00</p>
+<p>Model: smollm2:135m-instruct-q4_K_M</p>
+<p>LIVE: real HTTP gateway and its configured Ollama; no fault injection</p><p>Sampled RAM maximum: 91.3%. Sampling is not a hard cap or a guaranteed peak.</p><ul><li>PASS — prime succeeded</li><li>PASS — repeat cached</li><li>PASS — flood served from cache</li><li>PASS — cache only lane seen</li><li>PASS — cache only miss rejected</li><li>PASS — cache byte budget held</li><li>PASS — no active request leaks</li><li>PASS — model unloaded after run</li></ul>
+<details><summary>Recorded request outcomes</summary><div class="scroll"><table>
+<thead><tr><th>Request</th><th>HTTP</th><th>Strategy</th><th>Round trip</th></tr></thead>
+<tbody><tr><td>prime</td><td>200</td><td>LIVE_INFERENCE_ROUTING</td><td>2,040.194 ms</td></tr><tr><td>repeat</td><td>200</td><td>CACHE_HIT</td><td>5.275 ms</td></tr><tr><td>cached_burst_0</td><td>200</td><td>CACHE_HIT</td><td>24.267 ms</td></tr><tr><td>cached_burst_7</td><td>200</td><td>CACHE_HIT</td><td>40.724 ms</td></tr><tr><td>cached_burst_1</td><td>200</td><td>CACHE_HIT</td><td>45.594 ms</td></tr><tr><td>cached_burst_2</td><td>200</td><td>CACHE_HIT</td><td>47.101 ms</td></tr><tr><td>cached_burst_3</td><td>200</td><td>CACHE_HIT</td><td>52.795 ms</td></tr><tr><td>cached_burst_4</td><td>200</td><td>CACHE_HIT</td><td>54.776 ms</td></tr><tr><td>cached_burst_5</td><td>200</td><td>CACHE_HIT</td><td>56.661 ms</td></tr><tr><td>cached_burst_6</td><td>200</td><td>CACHE_HIT</td><td>58.446 ms</td></tr><tr><td>cached_burst_8</td><td>200</td><td>CACHE_HIT</td><td>61.074 ms</td></tr><tr><td>cached_burst_9</td><td>200</td><td>CACHE_HIT</td><td>61.482 ms</td></tr><tr><td>cached_burst_10</td><td>200</td><td>CACHE_HIT</td><td>62.817 ms</td></tr><tr><td>cached_burst_11</td><td>200</td><td>CACHE_HIT</td><td>64.254 ms</td></tr><tr><td>uncached_after_flood</td><td>429</td><td>Not recorded</td><td>6.117 ms</td></tr></tbody></table></div></details>
+<p class="fingerprint">Source SHA-256: bf14654da5f133c4f28fdfaa14c8176a2d2a863ec94a4219ab5ec8c0baf9b379</p></section><section><p class="label">SIMULATED RECOVERY — RECORDED</p>
+<h2>Checks passed</h2>
+<p>Recorded timestamp: 2026-11-05T13:08:41.232726+00:00</p>
+<p>Model: qwen2.5:0.5b</p>
+<p>SIMULATED: HTTPX mocked Ollama + injected OS counters; actual 3.6-second async upstream delay</p><ul><li>PASS — prime succeeded</li><li>PASS — repeat cached</li><li>PASS — flood served from cache</li><li>PASS — cache only lane seen</li><li>PASS — cache only miss rejected</li><li>PASS — cache byte budget held</li><li>PASS — no active request leaks</li><li>PASS — slow request survived pool rotation</li><li>PASS — latency threshold recovery</li><li>PASS — ram threshold recovery</li><li>PASS — context reduced to floor</li><li>PASS — cleared cache not refilled by retired generation</li></ul>
+<details><summary>Recorded request outcomes</summary><div class="scroll"><table>
+<thead><tr><th>Request</th><th>HTTP</th><th>Strategy</th><th>Round trip</th></tr></thead>
+<tbody><tr><td>prime</td><td>200</td><td>LIVE_INFERENCE_ROUTING</td><td>2.861 ms</td></tr><tr><td>repeat</td><td>200</td><td>CACHE_HIT</td><td>0.961 ms</td></tr><tr><td>cached_burst_0</td><td>200</td><td>CACHE_HIT</td><td>0.939 ms</td></tr><tr><td>cached_burst_1</td><td>200</td><td>CACHE_HIT</td><td>1.097 ms</td></tr><tr><td>cached_burst_2</td><td>200</td><td>CACHE_HIT</td><td>0.841 ms</td></tr><tr><td>cached_burst_3</td><td>200</td><td>CACHE_HIT</td><td>0.796 ms</td></tr><tr><td>cached_burst_4</td><td>200</td><td>CACHE_HIT</td><td>0.707 ms</td></tr><tr><td>cached_burst_5</td><td>200</td><td>CACHE_HIT</td><td>0.726 ms</td></tr><tr><td>cached_burst_6</td><td>200</td><td>CACHE_HIT</td><td>0.663 ms</td></tr><tr><td>cached_burst_7</td><td>200</td><td>CACHE_HIT</td><td>0.863 ms</td></tr><tr><td>cached_burst_8</td><td>200</td><td>CACHE_HIT</td><td>0.672 ms</td></tr><tr><td>cached_burst_9</td><td>200</td><td>CACHE_HIT</td><td>0.837 ms</td></tr><tr><td>cached_burst_10</td><td>200</td><td>CACHE_HIT</td><td>1.045 ms</td></tr><tr><td>cached_burst_11</td><td>200</td><td>CACHE_HIT</td><td>0.759 ms</td></tr><tr><td>uncached_after_flood</td><td>429</td><td>Not recorded</td><td>0.744 ms</td></tr></tbody></table></div></details>
+<p class="fingerprint">Source SHA-256: c2ba98505cfdf0663f9d53920858e67db6e9d03c67317ceb87a1760cd0d14847</p></section>
+<section><h2>What this establishes</h2><p>The recorded real run checks generation, cache reuse, burst routing and post-run model unloading.
+Recovery tests use a mocked upstream and injected counters. A rejected uncached burst request is an expected protection outcome.</p>
+<p>These are individual short runs, not average performance, a model-quality evaluation, user adoption, sustained-load certification or proof of a distributed cluster.
+Memory admission is not a hard Windows memory cap. Cached results reuse an answer rather than generating a new one.</p>
+<h2>Contribution</h2><p>The applicant directed the product and requirements and requested safe, measurable tests.
+Codex substantially implemented, debugged, tuned and ran the recorded checks. Further personal code understanding and real-user validation should be described honestly.</p>
+<p>Source fingerprints identify the input bytes used for this export; they do not authenticate the claims or independently reproduce the experiment.</p></section>
+</main></html>

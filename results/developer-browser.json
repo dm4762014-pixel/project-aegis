@@ -1,0 +1,13 @@
+{
+  "mode": "Real browser, real owned lab HTTP, actual recorded HAR imported through UI; no response mocks",
+  "run_id": "70b04f50-0917-4e48-82cd-22eaf196a0bd",
+  "known_failures_verified": 5,
+  "healthy_control_passed": true,
+  "actual_page_loads": 12,
+  "paired_screenshots_verified": 12,
+  "lab_export_verified": true,
+  "real_har_analysis_verified": true,
+  "mobile_horizontal_overflow": false,
+  "page_errors": [],
+  "passed": true
+}

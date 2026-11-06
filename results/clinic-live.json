@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "mode": "live",
+  "timestamp_utc": "2026-11-05T10:01:09.710334+00:00",
+  "elapsed_ms": 375.6,
+  "checks": [
+    {
+      "id": "adapter",
+      "label": "Local connection",
+      "elapsed_ms": 37.5,
+      "status": "passed",
+      "detail": "4 active interface(s) have a usable IP address. Virtual/VPN adapters may count."
+    },
+    {
+      "id": "dns",
+      "label": "System DNS",
+      "elapsed_ms": 199.4,
+      "status": "passed",
+      "detail": "The system resolver returned an address for example.com."
+    },
+    {
+      "id": "direct_ip",
+      "label": "Direct IP connection",
+      "elapsed_ms": 85.6,
+      "status": "passed",
+      "detail": "A direct TCP connection to 1.1.1.1:443 succeeded without a DNS lookup. This tests one destination only."
+    },
+    {
+      "id": "https",
+      "label": "Secure website",
+      "elapsed_ms": 333.4,
+      "status": "passed",
+      "detail": "A certificate-verified HTTPS request to example.com returned HTTP 200."
+    },
+    {
+      "id": "portal",
+      "label": "Network sign-in check",
+      "elapsed_ms": 295.6,
+      "status": "passed",
+      "detail": "The Microsoft connectivity probe returned the expected text without a redirect."
+    }
+  ],
+  "finding": {
+    "code": "checks_passed",
+    "title": "These connection checks passed",
+    "explanation": "Your laptop reached the tested destinations. This does not prove every app or website will work.",
+    "next_steps": [
+      "If one app still fails, check its service status and exact error message.",
+      "Run this again when the issue occurs and compare the evidence."
+    ]
+  },
+  "scope": "This laptop; fixed public destinations; direct connections. Browser proxies and VPN routes may behave differently.",
+  "privacy": "No adapter names, local IP addresses, SSIDs, response bodies, or portal URLs are included in this report.",
+  "changes_made": "None. No settings were modified and no AI service was used."
+}

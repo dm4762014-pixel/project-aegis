@@ -1,0 +1,18 @@
+{
+  "mode": "Real Chromium and real network probes; no network mocks",
+  "live_runs": 2,
+  "check_count": 5,
+  "export_contains_before_and_after": true,
+  "mobile_horizontal_overflow": false,
+  "page_errors": [],
+  "result": {
+    "code": "checks_passed",
+    "title": "These connection checks passed",
+    "explanation": "Your laptop reached the tested destinations. This does not prove every app or website will work.",
+    "next_steps": [
+      "If one app still fails, check its service status and exact error message.",
+      "Run this again when the issue occurs and compare the evidence."
+    ]
+  },
+  "passed": true
+}

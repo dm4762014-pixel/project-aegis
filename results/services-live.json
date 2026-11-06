@@ -1,0 +1,47 @@
+{
+  "mode": "Real public network checks; one laptop; no probe mocks",
+  "public_service_results": [
+    {
+      "target": "https://github.com/",
+      "stages": {
+        "dns": "passed",
+        "tcp": "passed",
+        "tls": "passed",
+        "http": "passed"
+      },
+      "http_detail": "HEAD returned HTTP 200. No login or response body was fetched."
+    },
+    {
+      "target": "https://example.com/",
+      "stages": {
+        "dns": "passed",
+        "tcp": "passed",
+        "tls": "passed",
+        "http": "passed"
+      },
+      "http_detail": "HEAD returned HTTP 200. No login or response body was fetched."
+    },
+    {
+      "target": "https://pypi.org/",
+      "stages": {
+        "dns": "passed",
+        "tcp": "passed",
+        "tls": "passed",
+        "http": "passed"
+      },
+      "http_detail": "HEAD returned HTTP 200. No login or response body was fetched."
+    },
+    {
+      "target": "https://example.com/clinic-not-found-check-20261105",
+      "stages": {
+        "dns": "passed",
+        "tcp": "passed",
+        "tls": "passed",
+        "http": "warning"
+      },
+      "http_detail": "HEAD returned HTTP 404. No login or response body was fetched."
+    }
+  ],
+  "private_literal_target_rejected": true,
+  "passed": true
+}

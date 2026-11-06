@@ -1,0 +1,379 @@
+{
+  "timestamp_utc": "2026-11-05T09:17:59.958629+00:00",
+  "model": "qwen2.5:0.5b",
+  "valid": true,
+  "method": "Three paired trials per workload, three sequential requests per route per trial; alternate route order; warmed model; identical options; unique UUID cache keys. Actual HTTP and Ollama; no mocks.",
+  "limitations": [
+    "One laptop; tiny sample; OS load and Ollama prefix caching can affect timing.",
+    "Repeated exact prompts deliberately favor caching. Unique prompts measure the no-cache-benefit case.",
+    "Timing and call reduction do not establish answer accuracy or dollar savings."
+  ],
+  "summary": [
+    {
+      "workload": "repeated",
+      "route": "direct",
+      "requests": 9,
+      "model_calls": 9,
+      "median_three_request_total_ms": 4482.755
+    },
+    {
+      "workload": "repeated",
+      "route": "gateway",
+      "requests": 9,
+      "model_calls": 3,
+      "median_three_request_total_ms": 1303.789
+    },
+    {
+      "workload": "unique",
+      "route": "direct",
+      "requests": 9,
+      "model_calls": 9,
+      "median_three_request_total_ms": 4266.768
+    },
+    {
+      "workload": "unique",
+      "route": "gateway",
+      "requests": 9,
+      "model_calls": 9,
+      "median_three_request_total_ms": 3905.616
+    }
+  ],
+  "trials": [
+    {
+      "workload": "repeated",
+      "trial": 1,
+      "route": "direct",
+      "round_trip_ms": [
+        2196.786,
+        1393.241,
+        1120.05
+      ],
+      "total_ms": 4710.077,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "DIRECT_MODEL",
+        "DIRECT_MODEL",
+        "DIRECT_MODEL"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "repeated",
+      "trial": 1,
+      "route": "gateway",
+      "round_trip_ms": [
+        1288.677,
+        11.153,
+        10.456
+      ],
+      "total_ms": 1310.286,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "LIVE_INFERENCE_ROUTING",
+        "CACHE_HIT",
+        "CACHE_HIT"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 1,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "repeated",
+      "trial": 2,
+      "route": "gateway",
+      "round_trip_ms": [
+        1276.838,
+        17.256,
+        9.695
+      ],
+      "total_ms": 1303.789,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "LIVE_INFERENCE_ROUTING",
+        "CACHE_HIT",
+        "CACHE_HIT"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 1,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "repeated",
+      "trial": 2,
+      "route": "direct",
+      "round_trip_ms": [
+        1168.339,
+        1202.716,
+        1243.676
+      ],
+      "total_ms": 3614.731,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "DIRECT_MODEL",
+        "DIRECT_MODEL",
+        "DIRECT_MODEL"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "repeated",
+      "trial": 3,
+      "route": "direct",
+      "round_trip_ms": [
+        1902.313,
+        1443.46,
+        1136.982
+      ],
+      "total_ms": 4482.755,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "DIRECT_MODEL",
+        "DIRECT_MODEL",
+        "DIRECT_MODEL"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "repeated",
+      "trial": 3,
+      "route": "gateway",
+      "round_trip_ms": [
+        1184.902,
+        9.08,
+        10.862
+      ],
+      "total_ms": 1204.844,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "LIVE_INFERENCE_ROUTING",
+        "CACHE_HIT",
+        "CACHE_HIT"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 1,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "unique",
+      "trial": 1,
+      "route": "direct",
+      "round_trip_ms": [
+        1069.352,
+        1289.912,
+        1907.504
+      ],
+      "total_ms": 4266.768,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "DIRECT_MODEL",
+        "DIRECT_MODEL",
+        "DIRECT_MODEL"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or a set of",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "unique",
+      "trial": 1,
+      "route": "gateway",
+      "round_trip_ms": [
+        1495.07,
+        1270.307,
+        1140.239
+      ],
+      "total_ms": 3905.616,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "LIVE_INFERENCE_ROUTING",
+        "LIVE_INFERENCE_ROUTING",
+        "LIVE_INFERENCE_ROUTING"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or a set of",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "unique",
+      "trial": 2,
+      "route": "gateway",
+      "round_trip_ms": [
+        1183.682,
+        1159.238,
+        1136.826
+      ],
+      "total_ms": 3479.746,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "LIVE_INFERENCE_ROUTING",
+        "LIVE_INFERENCE_ROUTING",
+        "LIVE_INFERENCE_ROUTING"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "unique",
+      "trial": 2,
+      "route": "direct",
+      "round_trip_ms": [
+        1289.693,
+        1493.1,
+        1499.276
+      ],
+      "total_ms": 4282.069,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "DIRECT_MODEL",
+        "DIRECT_MODEL",
+        "DIRECT_MODEL"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "unique",
+      "trial": 3,
+      "route": "direct",
+      "round_trip_ms": [
+        1247.53,
+        1116.935,
+        1443.933
+      ],
+      "total_ms": 3808.398,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "DIRECT_MODEL",
+        "DIRECT_MODEL",
+        "DIRECT_MODEL"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    },
+    {
+      "workload": "unique",
+      "trial": 3,
+      "route": "gateway",
+      "round_trip_ms": [
+        1222.9,
+        1604.589,
+        1870.897
+      ],
+      "total_ms": 4698.386,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "strategies": [
+        "LIVE_INFERENCE_ROUTING",
+        "LIVE_INFERENCE_ROUTING",
+        "LIVE_INFERENCE_ROUTING"
+      ],
+      "answers": [
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol.",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol or set of rules",
+        "A computer network is a system of interconnected devices and computers that communicate with each other using a common protocol."
+      ],
+      "model_calls": 3,
+      "other_gateway_requests_detected": false
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "source": "Actual configured Ollama /api/ps",
+  "models": [],
+  "keep_alive_seconds": 0
+}

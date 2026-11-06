@@ -1,0 +1,43 @@
+{
+  "mode": "One real laptop service check/export; synthetic multi-computer example clearly labeled in UI",
+  "real_target": "https://github.com/",
+  "real_stages": [
+    {
+      "id": "dns",
+      "status": "passed",
+      "detail": "System DNS returned public addresses. Resolved IPs are omitted from the report.",
+      "elapsed_ms": 185.3,
+      "http_status": null
+    },
+    {
+      "id": "tcp",
+      "status": "passed",
+      "detail": "Connected on TCP port 443 to a validated public address.",
+      "elapsed_ms": 102,
+      "http_status": null
+    },
+    {
+      "id": "tls",
+      "status": "passed",
+      "detail": "Certificate chain and hostname verified using the bundled public CA certificates (certifi).",
+      "elapsed_ms": 71.9,
+      "http_status": null
+    },
+    {
+      "id": "http",
+      "status": "passed",
+      "detail": "HEAD returned HTTP 200. No login or response body was fetched.",
+      "elapsed_ms": 46.7,
+      "http_status": 200
+    }
+  ],
+  "service_export_verified": true,
+  "duplicate_import_rejected": true,
+  "valid_file_imports_verified": true,
+  "comparison_export_verified": true,
+  "simulation_label_verified": true,
+  "comparison_table_verified": true,
+  "mobile_horizontal_overflow": false,
+  "page_errors": [],
+  "passed": true
+}

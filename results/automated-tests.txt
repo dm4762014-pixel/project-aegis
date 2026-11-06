@@ -1,0 +1,83 @@
+test_background_monitor_ram_recovery_hysteresis_and_cooldown (test_aegis.AegisTests.test_background_monitor_ram_recovery_hysteresis_and_cooldown) ... ok
+test_byte_budget_and_expiry (test_aegis.AegisTests.test_byte_budget_and_expiry) ... ok
+test_cancellation_releases_queue_and_activity (test_aegis.AegisTests.test_cancellation_releases_queue_and_activity) ... ok
+test_identity_is_bounded_and_rejects_forwarded_header_spoofing (test_aegis.AegisTests.test_identity_is_bounded_and_rejects_forwarded_header_spoofing) ... ok
+test_logs_do_not_contain_prompts_or_answers (test_aegis.AegisTests.test_logs_do_not_contain_prompts_or_answers) ... ok
+test_panic_proxy_routes_cached_answers_and_rejects_uncached_work (test_aegis.AegisTests.test_panic_proxy_routes_cached_answers_and_rejects_uncached_work) ... ok
+test_rate_penalty_expires_after_quiet_window (test_aegis.AegisTests.test_rate_penalty_expires_after_quiet_window) ... ok
+test_recovery_cooldown_suppresses_independent_triggers (test_aegis.AegisTests.test_recovery_cooldown_suppresses_independent_triggers) ... ok
+test_recovery_drains_pool_without_closing_active_request_or_refilling_cache (test_aegis.AegisTests.test_recovery_drains_pool_without_closing_active_request_or_refilling_cache) ... ok
+test_reduced_context_is_sent_to_next_ollama_call_and_old_cache_is_not_reused (test_aegis.AegisTests.test_reduced_context_is_sent_to_next_ollama_call_and_old_cache_is_not_reused) ... ok
+test_request_and_response_byte_limits (test_aegis.AegisTests.test_request_and_response_byte_limits) ... ok
+test_slow_inflight_request_recovers_once_not_again_when_it_finishes (test_aegis.AegisTests.test_slow_inflight_request_recovers_once_not_again_when_it_finishes) ... ok
+test_telemetry_and_recovery_are_read_only_observability (test_aegis.AegisTests.test_telemetry_and_recovery_are_read_only_observability) ... ok
+test_two_tiers_keep_exact_model_and_context_semantics (test_aegis.AegisTests.test_two_tiers_keep_exact_model_and_context_semantics) ... ok
+test_invalid_recovery_and_pool_configuration_fails_fast (test_aegis.CounterTests.test_invalid_recovery_and_pool_configuration_fails_fast) ... ok
+test_supported_and_unsupported_delta_scope (test_aegis.CounterTests.test_supported_and_unsupported_delta_scope) ... ok
+test_ambiguous_failure_remains_inconclusive (test_clinic.DiagnosisTests.test_ambiguous_failure_remains_inconclusive) ... ok
+test_blocked_ip_is_not_an_outage_if_web_works (test_clinic.DiagnosisTests.test_blocked_ip_is_not_an_outage_if_web_works) ... ok
+test_disconnected_interface_evidence (test_clinic.DiagnosisTests.test_disconnected_interface_evidence) ... ok
+test_dns_evidence_requires_ip_pass_and_web_failure (test_clinic.DiagnosisTests.test_dns_evidence_requires_ip_pass_and_web_failure) ... ok
+test_healthy_scope_does_not_claim_all_internet (test_clinic.DiagnosisTests.test_healthy_scope_does_not_claim_all_internet) ... ok
+test_only_usable_up_interfaces_count_and_names_stay_private (test_clinic.DiagnosisTests.test_only_usable_up_interfaces_count_and_names_stay_private) ... ok
+test_portal_is_suspected_not_certain (test_clinic.DiagnosisTests.test_portal_is_suspected_not_certain) ... ok
+test_concurrent_diagnostics_are_rejected (test_clinic.ProbeTests.test_concurrent_diagnostics_are_rejected) ... ok
+test_portal_expected_and_altered_content (test_clinic.ProbeTests.test_portal_expected_and_altered_content) ... ok
+test_portal_redirect_is_never_followed (test_clinic.ProbeTests.test_portal_redirect_is_never_followed) ... ok
+test_probe_deadline (test_clinic.ProbeTests.test_probe_deadline) ... Executing <Task pending name='Task-120' coro=<ProbeTests.test_probe_deadline() running at E:\enterprise-ai-mesh\tests\test_clinic.py:95> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()] created at [user-profile]\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py:752> cb=[_run_until_complete_cb() at [user-profile]\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:181] created at [user-profile]\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:110> took 0.134 seconds
+ok
+test_probe_errors_are_evidence_without_raw_secrets (test_clinic.ProbeTests.test_probe_errors_are_evidence_without_raw_secrets) ... ok
+test_unavailable_interface_information_is_not_a_disconnection (test_clinic.ProbeTests.test_unavailable_interface_information_is_not_a_disconnection) ... ok
+test_500_is_observed_not_an_invented_database_failure (test_developer.AnalysisTests.test_500_is_observed_not_an_invented_database_failure) ... ok
+test_cors_requires_explicit_browser_console_evidence (test_developer.AnalysisTests.test_cors_requires_explicit_browser_console_evidence) ... ok
+test_entry_count_and_status_are_validated (test_developer.AnalysisTests.test_entry_count_and_status_are_validated) ... ok
+test_har_export_omits_secrets_and_unknown_console_count (test_developer.AnalysisTests.test_har_export_omits_secrets_and_unknown_console_count) ... ok
+test_har_network_error_does_not_confirm_cors (test_developer.AnalysisTests.test_har_network_error_does_not_confirm_cors) ... ok
+test_healthy_control_and_no_capture_are_distinct (test_developer.AnalysisTests.test_healthy_control_and_no_capture_are_distinct) ... ok
+test_json_expectation_and_runtime_error (test_developer.AnalysisTests.test_json_expectation_and_runtime_error) ... ok
+test_no_case_label_or_path_word_shortcuts (test_developer.AnalysisTests.test_no_case_label_or_path_word_shortcuts) ... ok
+test_refusal_redirect_and_document_error (test_developer.AnalysisTests.test_refusal_redirect_and_document_error) ... ok
+test_unrelated_origin_does_not_create_api_failure (test_developer.AnalysisTests.test_unrelated_origin_does_not_create_api_failure) ... ok
+test_wrong_route_requires_intended_route_control (test_developer.AnalysisTests.test_wrong_route_requires_intended_route_control) ... ok
+test_fixture_faults_and_corrections_are_real_responses (test_developer.DeveloperApiTests.test_fixture_faults_and_corrections_are_real_responses) ... ok
+test_import_is_offline_and_does_not_save_raw_har (test_developer.DeveloperApiTests.test_import_is_offline_and_does_not_save_raw_har) ... ok
+test_runner_lock_and_snapshot_path_validation (test_developer.DeveloperApiTests.test_runner_lock_and_snapshot_path_validation) ... ok
+test_cache_capacity_and_expiry (test_gateway.GatewayTests.test_cache_capacity_and_expiry) ... ok
+test_deadline_releases_capacity (test_gateway.GatewayTests.test_deadline_releases_capacity) ... ok
+test_duplicate_concurrency_and_queue_rejection (test_gateway.GatewayTests.test_duplicate_concurrency_and_queue_rejection) ... ok
+test_evidence_endpoint_requires_a_real_saved_report (test_gateway.GatewayTests.test_evidence_endpoint_requires_a_real_saved_report) ... ok
+test_health_checks_backend_and_home_exists (test_gateway.GatewayTests.test_health_checks_backend_and_home_exists) ... Executing <Task pending name='Task-200' coro=<GatewayTests.test_health_checks_backend_and_home_exists() running at E:\enterprise-ai-mesh\tests\test_gateway.py:106> cb=[_run_until_complete_cb() at [user-profile]\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:181] created at [user-profile]\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:110> took 0.164 seconds
+ok
+test_input_and_origin_validation (test_gateway.GatewayTests.test_input_and_origin_validation) ... ok
+test_low_memory_blocks_generation (test_gateway.GatewayTests.test_low_memory_blocks_generation) ... ok
+test_model_and_output_limit_isolate_cache (test_gateway.GatewayTests.test_model_and_output_limit_isolate_cache) ... ok
+test_upstream_errors_do_not_poison_cache_or_leak_slots (test_gateway.GatewayTests.test_upstream_errors_do_not_poison_cache_or_leak_slots) ... Executing <Task finished name='Task-228' coro=<GatewayTests.test_upstream_errors_do_not_poison_cache_or_leak_slots() done, defined at E:\enterprise-ai-mesh\tests\test_gateway.py:65> result=None created at [user-profile]\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:110> took 0.175 seconds
+ok
+test_exact_repeats_do_not_reload_model (test_laptop.LaptopTests.test_exact_repeats_do_not_reload_model) ... ok
+test_fluctuating_ram_waits_for_a_safe_slot_before_model_loading (test_laptop.LaptopTests.test_fluctuating_ram_waits_for_a_safe_slot_before_model_loading) ... ok
+test_health_and_residency_use_real_configured_upstream_shapes (test_laptop.LaptopTests.test_health_and_residency_use_real_configured_upstream_shapes) ... ok
+test_large_model_is_refused_before_upstream_call (test_laptop.LaptopTests.test_large_model_is_refused_before_upstream_call) ... ok
+test_memory_guard_is_not_weakened (test_laptop.LaptopTests.test_memory_guard_is_not_weakened) ... ok
+test_residency_failure_does_not_claim_unloaded (test_laptop.LaptopTests.test_residency_failure_does_not_claim_unloaded) ... ok
+test_small_profile_sends_bounded_cpu_options_and_immediate_unload (test_laptop.LaptopTests.test_small_profile_sends_bounded_cpu_options_and_immediate_unload) ... ok
+test_unknown_occupied_port_is_left_alone (test_laptop.LauncherTests.test_unknown_occupied_port_is_left_alone) ... ok
+test_certificate_failure_skips_http (test_services.NetworkTests.test_certificate_failure_skips_http) ... ok
+test_compare_api_and_examples_preserve_simulated_provenance (test_services.NetworkTests.test_compare_api_and_examples_preserve_simulated_provenance) ... ok
+test_compare_api_limits_and_live_check_lock (test_services.NetworkTests.test_compare_api_limits_and_live_check_lock) ... ok
+test_deadline_does_not_leave_false_success (test_services.NetworkTests.test_deadline_does_not_leave_false_success) ... ok
+test_http_redirect_and_access_denied_are_not_followed (test_services.NetworkTests.test_http_redirect_and_access_denied_are_not_followed) ... Executing <Task finished name='Task-314' coro=<NetworkTests.test_http_redirect_and_access_denied_are_not_followed() done, defined at E:\enterprise-ai-mesh\tests\test_services.py:108> result=None created at [user-profile]\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:110> took 0.110 seconds
+ok
+test_private_and_mixed_dns_never_connect (test_services.NetworkTests.test_private_and_mixed_dns_never_connect) ... ok
+test_success_pins_connection_and_sends_only_head (test_services.NetworkTests.test_success_pins_connection_and_sends_only_head) ... ok
+test_duplicate_and_wrong_service_comparisons_rejected (test_services.ValidationTests.test_duplicate_and_wrong_service_comparisons_rejected) ... ok
+test_malformed_or_inconsistent_report_rejected (test_services.ValidationTests.test_malformed_or_inconsistent_report_rejected) ... ok
+test_matching_http_codes_are_compared_without_claiming_outage (test_services.ValidationTests.test_matching_http_codes_are_compared_without_claiming_outage) ... ok
+test_shared_failure_and_mixed_results_are_observations (test_services.ValidationTests.test_shared_failure_and_mixed_results_are_observations) ... ok
+test_simulation_and_stale_times_remain_visible (test_services.ValidationTests.test_simulation_and_stale_times_remain_visible) ... ok
+test_unsafe_targets_are_rejected (test_services.ValidationTests.test_unsafe_targets_are_rejected) ... ok
+test_url_normalization (test_services.ValidationTests.test_url_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 74 tests in 3.485s
+
+OK
